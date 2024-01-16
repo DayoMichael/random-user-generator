@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, FC } from "react";
 import { useQuery } from "react-query";
 import { DataViewStyle } from "./DataViewStyles";
 import Heading from "../../library/heading/Heading";
@@ -6,14 +6,17 @@ import Table from "../../library/table/Table";
 import ModalView from "../../library/modal/Modal";
 import { fetchData } from "../../apis";
 import { getHumanDate } from "../../utils";
+import { ColDef, CellClickedEvent } from "ag-grid-community";
+import { Loader } from "../../library/Loader/Loader";
+import { RowData } from "../../common/types";
 
-function DataView() {
+const DataView = () => {
   const { isLoading, data, refetch } = useQuery("user-details", fetchData, {
     enabled: false,
   });
-  const [rowData, setRowData] = useState(data || []);
-  const [openModal, setOpenModal] = useState(false);
-  const [userData, setUserData] = useState({
+  const [rowData, setRowData] = useState<RowData[]>(data || []);
+  const [openModal, setOpenModal] = useState<boolean>(false);
+  const [userData, setUserData] = useState<RowData>({
     picture: {},
     name: {},
     location: {},
@@ -23,10 +26,9 @@ function DataView() {
     dob: {},
   });
 
-  const columnDefs = [
+  const [columnDefs] = useState<ColDef[]>([
     {
       field: "picture",
-      headerName: "N/A",
       rowDrag: true,
       sortable: true,
       cellRenderer: (params: any) => {
@@ -39,7 +41,7 @@ function DataView() {
           />
         ) : null;
       },
-      width: 70,
+      width: 100,
     },
     {
       field: "name",
@@ -80,9 +82,9 @@ function DataView() {
         return `${getHumanDate(date)}`;
       },
     },
-  ];
+  ]);
 
-  const selectRow = ({ data }: any) => {
+  const selectRow = ({ data }: CellClickedEvent) => {
     setUserData(data);
     setOpenModal(!openModal);
   };
@@ -108,7 +110,7 @@ function DataView() {
   if (isLoading || !rowData) {
     return (
       <DataViewStyle>
-        <Heading text={"Loading..."} />
+        <Heading text={"Loading..."}  /> <Loader />
       </DataViewStyle>
     );
   }
@@ -121,7 +123,6 @@ function DataView() {
         rowData={rowData || []}
         gridOptions={gridOptions}
         onRowClicked={selectRow}
-        isLoading={isLoading}
       />
 
       <ModalView

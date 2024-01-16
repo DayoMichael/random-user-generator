@@ -1,11 +1,11 @@
-import React from 'react';
+import React, { FC } from 'react';
 import { HeadingStyles } from './HeadingStyles';
 
 type HeadingProps = {
     text: string
 } 
 
-function Heading({text}: HeadingProps) {
+const Heading: FC<HeadingProps> = ({text}) => {
   return (
     <HeadingStyles>
         <h2>{text}</h2>
