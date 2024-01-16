@@ -1,4 +1,4 @@
-import React, { useEffect, useState, FC } from "react";
+import React, { useEffect, useState, } from "react";
 import { useQuery } from "react-query";
 import { DataViewStyle } from "./DataViewStyles";
 import Heading from "../../library/heading/Heading";
