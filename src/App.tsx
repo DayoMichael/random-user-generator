@@ -1,4 +1,5 @@
 import React from "react";
+import './App.css'
 import { QueryClient, QueryClientProvider } from "react-query";
 import { styled } from "styled-components";
 import DataView from "./components/DataView/DataView";
