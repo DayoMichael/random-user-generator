@@ -1,12 +1,16 @@
-import React from 'react';
-import { styled } from 'styled-components';
-import DataView from './components/DataView/DataView';
+import React from "react";
+import { QueryClient, QueryClientProvider } from "react-query";
+import { styled } from "styled-components";
+import DataView from "./components/DataView/DataView";
 
 function App() {
+  const queryClient = new QueryClient();
   return (
-    <Styled className="App">
-     <DataView />
-    </Styled>
+    <QueryClientProvider client={queryClient}>
+      <Styled className="App">
+        <DataView />
+      </Styled>
+    </QueryClientProvider>
   );
 }
 
@@ -16,6 +20,6 @@ const Styled = styled.div`
   height: 100vh;
   width: 100%;
   background: #171717;
-
-`
-
+  color: #ffffff;
+  overflow-x: scroll;
+`;
