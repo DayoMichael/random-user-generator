@@ -31,12 +31,6 @@ function Table({ rowData, gridOptions, pagination, onRowClicked, isLoading }: Ta
     []
   );
 
-  console.log(rowData, "rowData");
-
-
-  if(isLoading || !rowData){
-    return <p>Loading...</p>
-  }
 
   return (
     <TableStyles>

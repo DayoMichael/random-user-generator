@@ -87,8 +87,6 @@ function DataView() {
     setOpenModal(!openModal);
   };
 
-  console.log(data, "data");
-
   const gridOptions = {
     columnDefs: columnDefs,
     overlayLoadingTemplate:
