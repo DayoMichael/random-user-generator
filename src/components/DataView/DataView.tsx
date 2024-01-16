@@ -65,7 +65,7 @@ const DataView = () => {
       sortable: true,
       cellRenderer: (params: any) => {
         const { city, state, country } = params.data.location;
-        return `${city} ${state} ${country}`;
+        return `${city}, ${state}, ${country}`;
       },
       width: 350,
     },
