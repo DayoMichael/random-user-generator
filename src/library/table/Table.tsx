@@ -4,14 +4,36 @@ import { AgGridReact } from "ag-grid-react";
 import "ag-grid-community/styles/ag-grid.css"; // Core CSS
 import "ag-grid-community/styles/ag-theme-quartz.css"; // Theme
 
+
+interface Picture {
+    large?: string,
+    medium?: string,
+    thumbnail?: string
+}
+
+interface Name {
+    title?: string,
+    last?: string,
+    first?: string
+}
+
+interface Address {
+    city?: string,
+    state?: string,
+    country?: string
+}
+
+interface Dob {
+    date?: string,
+}
 interface RowData {
-  picture: string;
-  name: string;
+  picture: Picture;
+  name: Name;
   email: string;
-  address: string;
+  address: Address;
   cell: string;
   gender: string;
-  dob: object;
+  dob: Dob;
   
 }
 
