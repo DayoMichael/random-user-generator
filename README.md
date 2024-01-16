@@ -17,6 +17,7 @@ Experience the App on this url: https://random-user-generator-sigma.vercel.app/
 - [ag-Grid](https://www.ag-grid.com/): An advanced JavaScript grid library for data presentation.
 - [React Query](https://react-query.tanstack.com/): A library for managing, caching, and updating remote and local data.
 - [Styled Components](https://styled-components.com/): A popular CSS-in-JS library for styling React components.
+- [Random User generator Api](https://randomuser.me/): An api to generate random details of different users.
 
 ## Getting Started
 
