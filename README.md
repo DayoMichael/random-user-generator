@@ -2,6 +2,8 @@
 
 Welcome to the User Details App! This project is a simple application for managing and displaying user details. It utilizes Create React App as the foundation and integrates powerful libraries like ag-Grid, React Query, and Styled Components to provide a seamless and efficient user experience.
 
+Experience the App on this url: https://random-user-generator-sigma.vercel.app/
+
 ## Features
 
 - View and manage user details in a tabular format with ag-Grid.
