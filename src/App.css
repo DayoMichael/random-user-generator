@@ -32,6 +32,12 @@
   border-radius: 8px;
 }
 
+@media only screen and (max-width: 767px) {
+  .react-responsive-modal-modal {
+      min-width: 80%;
+  }
+}
+
 .user-image {
   height: 10px;
   width: 10px;

@@ -33,5 +33,8 @@ export const ModalStyles = styled.div`
 
     @media only screen and (max-width: 767px) {
         min-width: auto;
+        .react-responsive-modal-modal {
+            min-width: 80%;
+        }
     }
 `
