@@ -1,6 +1,28 @@
-# Getting Started with Create React App
+# User Details App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Welcome to the User Details App! This project is a simple application for managing and displaying user details. It utilizes Create React App as the foundation and integrates powerful libraries like ag-Grid, React Query, and Styled Components to provide a seamless and efficient user experience.
+
+## Features
+
+- View and manage user details in a tabular format with ag-Grid.
+- Efficiently handle data fetching and state management with React Query.
+- Achieve a clean and maintainable UI with Styled Components.
+- Responsive design for optimal user experience on various devices.
+
+## Technologies Used
+
+- [Create React App](https://create-react-app.dev/): The standard tooling setup for React applications.
+- [ag-Grid](https://www.ag-grid.com/): An advanced JavaScript grid library for data presentation.
+- [React Query](https://react-query.tanstack.com/): A library for managing, caching, and updating remote and local data.
+- [Styled Components](https://styled-components.com/): A popular CSS-in-JS library for styling React components.
+
+## Getting Started
+
+1. **Clone the repository:**
+
+   ```bash
+   git clone https://github.com/DayoMichael/random-user-generator.git
+   cd random-user-generator
 
 ## Available Scripts
 
